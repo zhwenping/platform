@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中 -->
+    <item android:drawable="@drawable/gongzuotai_sel"
+          android:state_checked="true" />
+    <!-- 未选中 -->
+    <item
+          android:drawable="@drawable/gongzuotai_nor"
+          android:state_checked="false" />
+</selector>

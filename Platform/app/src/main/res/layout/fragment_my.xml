@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg_grey">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         >
+        <RelativeLayout
+            android:background="@mipmap/bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/head"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_marginBottom="25dp"/>
+                <TextView
+                    android:id="@+id/tv_role"
+                    android:textSize="@dimen/font_size_13"
+                    android:textColor="@color/font_grey"
+                    android:text="Bob：经理"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"/>
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:textSize="@dimen/font_size_13"
+                    android:textColor="@color/font_grey"
+                    android:text="手机号：1234567890"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="19dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@color/home_bg_grey"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/home_bg_grey">
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rl_sys_update"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                         android:text="系统升级"
+                        android:drawableLeft="@mipmap/icon_xtsj"
+                         style="@style/tv_my"/>
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_centerVertical="true"
+                        android:text="已是最新版本"
+                        android:textColor="@color/ligth_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/home_bg_grey"/>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/op_reback"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="意见反馈"
+                        style="@style/tv_my"
+                        android:drawableLeft="@mipmap/icon_yjfk"
+                        />
+                    <ImageView
+                        android:src="@mipmap/more"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/home_bg_grey"/>
+                <RelativeLayout
+                    android:id="@+id/rl_notice"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="通知提醒"
+                        style="@style/tv_my"
+                        android:drawableLeft="@mipmap/icon_tztx"
+                        />
+                    <com.rmmis.platform.view.SwitchButton
+                        android:id="@+id/switchbutton"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:closeImage="@mipmap/wode_off"
+                        app:openImage="@mipmap/wode_on"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/home_bg_grey"/>
+                <RelativeLayout
+                    android:id="@+id/rl_modify_password"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="修改密码"
+                        style="@style/tv_my"
+                        android:drawableLeft="@mipmap/icon_xgmm"
+                        />
+                    <ImageView
+                        android:src="@mipmap/more"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/home_bg_grey"/>
+                <RelativeLayout
+                    android:id="@+id/rl_firgue_password"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="手势密码"
+                        style="@style/tv_my"
+                        android:drawableLeft="@mipmap/icon5"
+                        />
+                    <ImageView
+
+                        android:id="@+id/switchbutton_firgue_password"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/home_bg_grey"/>
+                <RelativeLayout
+                    android:id="@+id/rl_modify_firpassword"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="修改手势密码"
+                        style="@style/tv_my"
+                        android:drawableLeft="@mipmap/icon6"
+                        />
+                    <ImageView
+                        android:src="@mipmap/more"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/home_bg_grey"/>
+                <LinearLayout
+                    android:background="@color/home_bg_grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/tv_logout"
+                        android:textSize="@dimen/font_size_15"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="退出"
+                        android:background="@drawable/rectangle_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginBottom="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
