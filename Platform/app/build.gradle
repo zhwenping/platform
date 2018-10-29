@@ -1,4 +1,5 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 def releaseTime() {
     return new Date().format("yyyy/MM/dd", TimeZone.getDefault());
@@ -6,7 +7,7 @@ def releaseTime() {
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.ict.platform"
+//        applicationId "com.ict.platform"
         minSdkVersion 17
         targetSdkVersion 27
         versionCode 1
@@ -28,11 +29,11 @@ android {
 
         }
 
-        manifestPlaceholders = [
-                JPUSH_PKGNAME : applicationId,
-                JPUSH_APPKEY : "579d568b019d4a4275bac72d", //JPush 上注册的包名对应的 Appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
-        ]
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME : applicationId,
+//                JPUSH_APPKEY : "579d568b019d4a4275bac72d", //JPush 上注册的包名对应的 Appkey.
+//                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//        ]
     }
     buildTypes {
         release {
