@@ -1,0 +1,88 @@
+apply plugin:'com.android.library'
+
+//def releaseTime() {
+//    return new Date().format("yyyyMMdd", TimeZone.getDefault());
+//}
+android {
+    compileSdkVersion 27
+    defaultConfig {
+//        applicationId "com.ict.platform"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //添加部分
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        //自定义打包时apk名字
+//        android.applicationVariants.all { variant ->
+//            variant.outputs.all {
+//                // abc_渠道名_版本名.apk  还可以拼接其他app内容：variant.versionCode  variant.buildType.name
+////                outputFileName = "Platform_v${variant.versionName}_${releaseTime()}.apk"
+//                outputFileName = "Platform.apk"
+//            }
+//        }
+//        ndk {
+//            //选择要添加的对应 cpu 类型的 .so 库。
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'x86_64', 'mips', 'mips64'
+//
+//        }
+
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME : applicationId,
+//                JPUSH_APPKEY : "579d568b019d4a4275bac72d", //JPush 上注册的包名对应的 Appkey.
+//                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    packagingOptions {
+//        doNotStrip '*/mips/*.so'
+//        doNotStrip '*/mips64/*.so'
+//    }
+
+
+
+}
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    网络请求
+    implementation 'com.google.code.gson:gson:2.8.0'
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.readystatesoftware.chuck:library:1.0.4'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.lzy.net:okserver:2.0.5'
+    //图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    //上拉刷新和下拉加载
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    // 广播机制
+    implementation files('libs/EventBus-2.4.0.jar')
+    //极光推送
+//    compile 'cn.jiguang.sdk:jpush:3.1.6'
+//    compile 'cn.jiguang.sdk:jcore:1.2.5'
+    //左滑退出
+    compile 'me.imid.swipebacklayout.lib:library:1.1.0'
+    //时间和地区选择器
+    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+
+
+}

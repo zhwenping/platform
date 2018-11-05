@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">移动平台</string>
+    <string name="exit_tip">再按一次退出程序</string>
+    <!--底部按钮-->
+    <string name="desk">工作台</string>
+    <string name="message">消息</string>
+    <string name="my">我的</string>
+    <!--对话框-->
+    <string name="submit">确定</string>
+    <string name="cancel">取消</string>
+    <!--消息界面-->
+    <string name="mess_title">铁路总公司召开川藏铁路建设前期工作运动会</string>
+    <string name="mess_time"> 2018-09-09</string>
+    <string name="mess_people">测试人员</string>
+    <string name="mess_content">10月12日下午，中国铁路总局在成都召开川藏铁路建设前期工作动员会，学习贯彻习近平总书记在中央财经委员会第三次会议上的重要讲话精神</string>
+</resources>
