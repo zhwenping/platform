@@ -4,8 +4,9 @@
   >>主题颜色蓝色，使用okgo网络框架，Glide图片加载框架
   ### 项目框架的使用 
   >>implementation 'com.github.zhwenping:platform:2.0.0'  
-# 二：项目框架的使用      
- ## 1：网络请求 
+# 二：项目框架的使用 
+ ## 1：基类的使用
+ ## 2：网络请求 
  ### 1）网络请求主题
       Map map = new HashMap();
       map.put("userId", userId);
@@ -40,6 +41,7 @@
    
     }
 
- ## 1：图片加载
+ ## 3：图片加载
+ ## 4：控件注解
  
  
