@@ -5,7 +5,9 @@
   ### 项目框架的使用 
   >>implementation 'com.github.zhwenping:platform:2.0.0'  
 # 二：项目框架的使用 
- ## 1：基类的使用
+ ## 1：基类（BaseActivity）的使用
+ ### 1）继承方法
+ ### 2）常用函数
  ## 2：网络请求 
  ### 1）网络请求主题
       Map map = new HashMap();
@@ -42,6 +44,28 @@
     }
 
  ## 3：图片加载
+ 
  ## 4：控件注解
+   ### 控件注册
+   >> ButterKnife.bind(this);
+   ### 控件使用
+   #### 定义控件
+      @Bind(R.id.tv_title)
+      TextView tvTitle;
+      @Bind(R.id.tv_time)
+      TextView tvTime;
+   #### 点击事件
+     @OnClick(R.id.tv_content)
+     public void onViewClicked() {
+    }
+   ### 控件释放
+     @Override
+     protected void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
+
+    }
+ 
+      
  
  
