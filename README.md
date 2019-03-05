@@ -55,7 +55,7 @@
       @Bind(R.id.tv_time)
       TextView tvTime;
    #### 点击事件
-     @OnClick(R.id.tv_content)
+     @OnClick(R.id.tv_title,R.id.tv_time)
      public void onViewClicked() {
     }
    ### 控件释放
