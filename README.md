@@ -7,7 +7,24 @@
 # 二：项目框架的使用 
  ## 1：基类（BaseActivity）的使用
  ### 1）继承方法
+ #### 获取中间内容显示区
+ >>protected abstract int getContentView();
+  #### 初始化数据
+  >> protected abstract void initData();
+  #### 设置监听事件
+  >> protected  void setListener(){};
+  #### 点击右侧按钮
+  >> protected void onClickRight() {}
+  ####  获取自定义标题栏 (如果子类复写并返回不等于0的布局文件，将会覆盖默认标题;返回0 将会采用默认标题)
+  >>  protected int getTitlebarResId() { return 0;}
+    
  ### 2）常用函数
+ ###### void setLeftBtnVisible(Boolean visible) true:显示左侧按钮， false：不显示左侧按钮
+ ###### void setRightBtnVisible(Boolean visible) true:显示右侧按钮， false：不显示右侧按钮
+ ###### void setTitle 设置中间标题
+ ###### void setRtTitle 设置右侧标题
+ ###### View getTitleBar() 获取标题栏控件
+
  ## 2：网络请求 
  ### 1）网络请求主题
       Map map = new HashMap();
