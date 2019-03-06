@@ -61,6 +61,10 @@
     }
 
  ## 3：图片加载
+ ### loadImage(Context context, String url, int erroImg, int emptyImg, ImageView iv)：加载网络图片 
+ ### loadImage(Context context, String url, ImageView iv)：加载网络图片
+ ### loadImage(Context context, final File file, final ImageView imageView)：加载本地文件
+ ### loadImage(Context context, final int resourceId, final ImageView imageView)：加载资源文件下的文件
  
  ## 4：控件注解
    ### 控件注册
