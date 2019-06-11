@@ -29,6 +29,7 @@ import android.widget.TextView;
 
 import com.rmmis.platform.PermissionListener;
 import com.rmmis.platform.R;
+import com.rmmis.platform.util.StatusUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,23 +62,21 @@ public abstract class BaseActivity extends SwipeBackActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mSwipeBackLayout = getSwipeBackLayout();
         //设置滑动方向，可设置EDGE_LEFT, EDGE_RIGHT, EDGE_ALL, EDGE_BOTTOM
         mSwipeBackLayout.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
-        setContentView(R.layout.activity_base);
         setTranslucentStatus();
+        setContentView(R.layout.activity_base);
         mContext=BaseActivity.this;
         int titlebarResId = getTitlebarResId();
-
         if (titlebarResId != 0) {
-
             LinearLayout view = (LinearLayout)findViewById(R.id.base_view);
             view.removeViewAt(0);
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics()));
             ViewGroup titleView = (ViewGroup) View.inflate(this, titlebarResId, null);
             view.addView(titleView, 0, lp);
-            view.setBackgroundDrawable(titleView.getBackground());
+//            view.setBackgroundDrawable(titleView.getBackground());
 
             titlebar = titleView;
         } else {
@@ -115,15 +114,9 @@ public abstract class BaseActivity extends SwipeBackActivity {
      * 设置状态栏背景状态
      */
     private void setTranslucentStatus() {
-        //判断当前SDK版本号，如果是4.4以上，就是支持沉浸式状态栏的
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-
-        }
-
+        StatusUtil.setDrawable(this, R.drawable.background);
     }
+
 
     /**
      * 点击左侧按钮
@@ -389,7 +382,6 @@ public abstract class BaseActivity extends SwipeBackActivity {
         }
     }
 
+    }
 
-
-}
 
